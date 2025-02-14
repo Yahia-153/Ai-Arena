@@ -6,46 +6,45 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/scss/custom.css">
     <title>Ai Arena</title>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="top">
-            <div class="logo">
-                <img src="imgs/logo.png" alt="Logo">
+<body class="bg-light">
+    <nav class="navbar p-3 fixed-top mt-4 mx-auto w-75 border d-flex align-items-center " id="navbar">
+        <div class="container container-lg">
+          <a class="navbar-brand" href="index.html">
+            <img class="mainLogoImg col-12" src="imgs/logo.png">
+          </a>
+          <button class="navbar-toggler rounded-4 border-0 border-none outliune-0 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+            <div class="container conatiner-fluid  my-2  d-xl-flex align-items-center flex-wrap justify-content-around  text-nowrap fw-bold ff-secondary fs-6" id="navLinks">
+              <a class=" nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Home</a>
+              <a class=" nav-link" href="about.html"><i class="bi bi-people me-1"></i>About</a>
+              <a class=" nav-link" href="services.html"><i class="bi bi-gear me-1"></i>Services</a>
+              <a class=" nav-link" href="archive.html"><i class="bi bi-archive me-1"></i></i>Archive</a>
+              <a class=" nav-link" href="contact.html"><i class="bi bi-headset me-1"></i>Contact</a>
             </div>
-            <div class="burger-btn">
-                <label class="hamburger">
-                    <input type="checkbox" id="burgerBtn">
-                    <svg viewBox="0 0 32 32">
-                      <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                      <path class="line" d="M7 16 27 16"></path>
-                    </svg>
-                  </label>            
-            </div>
+          </div>
         </div>
-        <div class="burger-menu" id="burgerMenu">
-            <ul>
-                <li class="link active"><a href="#"><i class="fa-solid fa-house"></i>home</a></li>
-                <li class="link"><a href="#"><i class="fa-solid fa-user"></i>about</a></li>
-                <li class="link"><a href="#"><i class="fa-solid fa-gear"></i>our services</a></li>
-                <li class="link"><a href="#"><i class="fa-solid fa-box-archive"></i>archive</a></li>
-                <li class="link"><a href="#"><i class="fa-solid fa-headset"></i>contact us</a></li>
-            </ul>
-        </div>
-    </nav>
+      </nav>
+      <button type="button" id="toTop" class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-5 z-3 shadow d-none" id="backToTop" style="width:clamp(50px , 11dvw, 70px); aspect-ratio: 1/1;">
+        <i class="bi bi-arrow-up text-white fs-2 fw-bold"></i>
+      </button>
     <div class="hero-sec">
-        <div class="container">
-            <div class="hero-content">
-                <div class="text">
-                    <h1>welcome to our world</h1>
-                    <p>Where AI Meets Innovation</p>
-                    <button class="btn">Learn More</button>
+        <div class="hero-container row row-cols-1 row-cols-md-2 m-0 position-relative flex-wrap-reverse">
+            <div class="hero-content col d-grid justify-content-center align-items-center py-0 px-1">
+                <div class="text text-center z-1">
+                    <h1 class="fs-1 text-primary text-capitalize ff-secondary">welcome to our world</h1>
+                    <p class="fs-4">Where AI Meets Innovation</p>
+                    <button class="btn btn-primary">Learn More</button>
                 </div>
             </div>
-            <div class="hero-img">
+            <div class="hero-img col z-0">
                 <img src="imgs/robot-hi.jpeg" alt="Hero Image">
             </div>
+            
             <a href="#cources"><div class="next">
                 <i class="fa-solid fa-arrow-down"></i>
             </div></a>
@@ -71,5 +70,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

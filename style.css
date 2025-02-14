@@ -1,160 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Sriracha&display=swap");
+@import url("./bootstrap-icons/font/bootstrap-icons.css");
 * {
   margin: 0;
   padding: 0;
   outline: none;
 }
 :root {
-  --primary-color: #2d307f;
+  --primary: #2d2f7e;
+  --secondary: #4a4db8;
+  --info: #00c2c7;
+  --warning: #ffcc00;
+  --danger: #ff6b6b;
+  --success: #a8d5ba;
+  --light: #f4f4f4;
+  --dark: #1a1a1a;
   --primary-font: "Sriracha", serif;
   --secondary-font: "Comfortaa", serif;
 }
 body {
   padding-top: 120px;
-  background: #fcfcfc;
   scroll-behavior: smooth;
+  font-family: var(--secondary-font);
+
+  .border-none {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .border-none:focus {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .ff-secondary {
+    font-family: var(--secondary-font);
+  }
 }
 .navbar {
-  --nav-width: 80%;
-  background: transparent;
+  backdrop-filter: opacity(0.2);
+  border-radius: 3rem;
   backdrop-filter: blur(5px);
-  width: var(--nav-width);
-  margin: 0 auto;
-  border-radius: 30px;
-  position: fixed;
-  top: 20px;
-  left: calc((100% - var(--nav-width)) / 2);
-  right: calc((100% - var(--nav-width)) / 2);
-  overflow: hidden;
-  transition: all 0.25s linear;
-  height: 95px;
-  border: 1px solid var(--primary-color);
-  z-index: 99;
-  .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    .logo {
-      img {
-        height: 75px;
-      }
-    }
-    .burger-btn {
-      /* From Uiverse.io by JulanDeAlb */
-      .hamburger {
-        cursor: pointer;
-      }
+  transition: height 0.3s linear;
 
-      .hamburger input {
-        display: none;
-      }
-
-      .hamburger svg {
-        height: 3em;
-        transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .line {
-        fill: none;
-        stroke: var(--primary-color);
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 2;
-        /* Define the transition for transforming the Stroke */
-        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      .line-top-bottom {
-        stroke-dasharray: 12 63;
-      }
-
-      .hamburger input:checked + svg {
-        transform: rotate(-45deg);
-      }
-
-      .hamburger input:checked + svg .line-top-bottom {
-        stroke-dasharray: 20 300;
-        stroke-dashoffset: -32.42;
-      }
+  .container {
+    .navbar-brand {
+      width: 160px;
     }
   }
-  .burger-menu {
-    ul {
-      display: flex;
-      list-style: none;
-      width: 80%;
-      justify-content: space-around;
-      margin: 0 auto;
-      text-transform: capitalize;
-      font-family: var(--secondary-font);
-      font-weight: bold;
-      padding-bottom: 20px;
-      font-size: 1.15rem;
-      li {
-        a {
-          color: black;
-          text-decoration: none;
-          padding: 5px 7px;
-         i{
-          margin-right: 6px;
-            
-         }
-        }
+  .collapse {
+    .container {
+      .nav-link {
+        position: relative;
+        margin-bottom: 1px;
         &.active {
-          a {
-            color: var(--primary-color);
-            border-bottom: 2px solid;
+          color: var(--primary);
+          &::before{
+            content: '';
+            position: absolute;
+            right: 50%;
+            left: 50%;
+            bottom: -3px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition:  .125s linear;
           }
+          &:hover{
+            &::before{
+              left: -3px;
+              right: -3px;
+            }
+          }
+          
         }
       }
     }
   }
 }
 .hero-sec {
-  min-height: calc(100dvh - 120px);
-  .container {
-    min-height: calc(100dvh - 120px);
-    display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row;
+  .hero-container {
     .hero-content {
-      flex: 50;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 4rem;
       min-width: 400px;
       .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        h1 {
-          font-size: 3rem;
-          font-family: var(--secondary-font);
-          text-transform: capitalize;
-          color: var(--primary-color);
-          text-align: center;
-        }
         p {
-          font-size: 1.5rem;
-          font-family: var(--secondary-font);
           color: gray;
         }
         button {
           padding: 10px 20px;
           font-size: 1.2rem;
           font-family: var(--secondary-font);
-          background: var(--primary-color);
-          color: white;
           border: none;
           cursor: pointer;
-          transition: 0.5s;
+          transition: box-shadow 0.25s linear;
           border-radius: 5px;
           &:hover {
-            box-shadow: -3px 3px 3px black;
+            box-shadow: -3px 3px 3px rgb(105, 105, 105);
           }
           &:active {
             transform: scale(0.95);
@@ -213,7 +152,8 @@ body {
   }
 }
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(10px);
   }
 
