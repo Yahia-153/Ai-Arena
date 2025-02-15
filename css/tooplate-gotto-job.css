@@ -782,7 +782,7 @@ nav[aria-label="breadcrumb"] {
 }
 
 .youtube-icon {
-  background: var(--custom-btn-bg-color);
+  background: var(--primary-color);
   font-size: var(--h2-font-size);
   color: var(--white-color);
   border-radius: var(--border-radius-large);
@@ -872,7 +872,7 @@ nav[aria-label="breadcrumb"] {
 
 .categories-icon {
   color: var(--white-color);
-  font-size: var(--h4-font-size);
+  width: 50px;
   line-height: normal;
   margin-bottom: 5px;
 }
@@ -1550,5 +1550,45 @@ nav[aria-label="breadcrumb"] {
 
   .job-detail-share {
     margin: 20px auto 0 auto;
+  }
+}
+.partners-sec{
+  .slider{
+      min-height:calc(var(--item-height) * 1.5) ;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: visible;
+      mask-image: linear-gradient(to right, transparent , black 25% 75% , transparent);
+      .item{
+          width: 250px;
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          animation: autoRun 10s linear infinite both;
+          animation-delay: calc(((10s / var(--quantity)) * (var(--position) - 1)) * -1);
+          img{
+              height: var(--item-height);
+              filter: brightness(0) invert(.25);
+              transition: all .25s linear;
+              &:hover{
+                  filter: brightness(1) invert(0);
+                  transform: scale(1.05);
+              }
+          }
+      }
+      &:hover .item{
+          animation-play-state: paused;
+      }
+  }
+}
+@keyframes autoRun {
+  from {
+      left: calc(250px * (var(--quantity) - 1));
+  }
+  to {
+      left: calc(250px * (var(--quantity) / 2 * -1));
   }
 }
