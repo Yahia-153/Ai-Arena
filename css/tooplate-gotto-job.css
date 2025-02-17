@@ -543,8 +543,6 @@ nav[aria-label="breadcrumb"] {
   text-transform: none;
   line-height: 1;
   vertical-align: -0.125em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   position: relative;
   left: 2px;
   border: 0;
