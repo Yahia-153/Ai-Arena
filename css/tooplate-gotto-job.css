@@ -1560,8 +1560,8 @@ nav[aria-label="breadcrumb"] {
           justify-content: center;
           align-items: center;
           position: absolute;
-          animation: autoRun 17.5s linear infinite both;
-          animation-delay: calc(((17.5s / var(--quantity)) * (var(--position) - 1)) * -1);
+          animation: autoRun 25s linear infinite both;
+          animation-delay: calc(((25s / var(--quantity)) * (var(--position) - 1)) * -1);
           img{
               height: var(--item-height);
               filter: brightness(0) invert(.25);
