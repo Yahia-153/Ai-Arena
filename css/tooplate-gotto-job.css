@@ -1502,7 +1502,7 @@ nav[aria-label="breadcrumb"] {
 
 @media screen and (max-width: 480px) {
   .partners-sec .slider{
-    --slider-duration: 110s;
+    --slider-duration: 80s;
   }
   h1 {
     font-size: 40px;
