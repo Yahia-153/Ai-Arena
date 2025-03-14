@@ -1385,6 +1385,9 @@ nav[aria-label="breadcrumb"] {
 }
 
 @media screen and (max-width: 991px) {
+  .partners-sec .slider{
+    --slider-duration: 55s;
+  }
   h1 {
     font-size: 48px;
   }
@@ -1498,6 +1501,9 @@ nav[aria-label="breadcrumb"] {
 }
 
 @media screen and (max-width: 480px) {
+  .partners-sec .slider{
+    --slider-duration: 110s;
+  }
   h1 {
     font-size: 40px;
   }
@@ -1544,6 +1550,7 @@ nav[aria-label="breadcrumb"] {
   .job-detail-share {
     margin: 20px auto 0 auto;
   }
+  
 }
 .partners-sec .slider{
       min-height:calc(var(--item-height) * 1.1) ;
@@ -1560,8 +1567,9 @@ nav[aria-label="breadcrumb"] {
           justify-content: center;
           align-items: center;
           position: absolute;
-          animation: autoRun 25s linear infinite both;
-          animation-delay: calc(((25s / var(--quantity)) * (var(--position) - 1)) * -1);
+          --slider-duration: 25s;
+          animation: autoRun var(--slider-duration) linear infinite both;
+          animation-delay: calc((( var(--slider-duration) / var(--quantity)) * (var(--position) - 1)) * -1);
           img{
               height: var(--item-height);
               filter: brightness(0) invert(.25);
