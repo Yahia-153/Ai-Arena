@@ -45,7 +45,7 @@ body {
 h2{
     font-size: var(--h2-font-size);
 }
-.compititions-sec .slider {
+.partners-sec .slider {
     min-height: calc(var(--item-height) * 1.1);
     margin: 0;
     display: flex;
@@ -57,7 +57,7 @@ h2{
     mask-image: linear-gradient(to right, transparent, black 25% 75%, transparent);
 }
 
-.compititions-sec .slider .item {
+.partners-sec .slider .item {
     width: var(--item-height);
     display: flex;
     justify-content: center;
@@ -69,7 +69,7 @@ h2{
     animation-delay: calc((( var(--slider-duration) / var(--quantity)) * (var(--position) - 1)) * -1);
 }
 
-.compititions-sec .slider .item img {
+.partners-sec .slider .item img {
     height: var(--item-height);
     -webkit-filter: brightness(0) invert(.25);
     filter: brightness(0) invert(.25);
@@ -77,14 +77,14 @@ h2{
     transition: all .4s linear;
 }
 
-.compititions-sec .slider .item img:hover {
+.partners-sec .slider .item img:hover {
     -webkit-filter: brightness(1) invert(0);
     filter: brightness(1) invert(0);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
 
-.compititions-sec .slider:hover .item {
+.partners-sec .slider:hover .item {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
