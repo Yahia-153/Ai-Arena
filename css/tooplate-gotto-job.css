@@ -1,16 +1,16 @@
-
 */
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
-*{
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 0 !important;
-  border: 0 !important;
 }
-:root {
+:root 
+{
   --white-color: #ffffff;
   --primary-color: #2d3081;
   --secondary-color: #5658a7;
@@ -47,6 +47,9 @@
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
+  padding-top: 110px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*---------------------------------------
@@ -58,7 +61,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--dark-color);
   font-weight: var(--font-weight-semibold);
   letter-spacing: -0.5px;
 }
@@ -125,9 +127,7 @@ b,
 strong {
   font-weight: var(--font-weight-bold);
 }
-body{
-  padding-top: 110px;
-}
+
 /*---------------------------------------
   SECTION               
 -----------------------------------------*/
@@ -141,9 +141,7 @@ body{
 }
 
 .section-overlay {
-  background: rgba(0, 0, 0, 0.85);
-  background: var(--custom-btn-bg-color);
-  opacity: 0.85;
+  background: rgba(6, 114, 177, 0.85); /* Simplified from multiple backgrounds */
   position: absolute;
   top: 0;
   left: 0;
@@ -382,7 +380,13 @@ nav[aria-label="breadcrumb"] {
 /*---------------------------------------
   CUSTOM BUTTON               
 -----------------------------------------*/
-.custom-btn {
+.custom-btn,
+.btn-custom-primary {
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
   border-radius: var(--border-radius-large);
@@ -588,7 +592,9 @@ nav[aria-label="breadcrumb"] {
 
 .navbar-toggler .navbar-toggler-icon {
   background: var(--dark-color);
-  transition: background 10ms 300ms ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
   display: block;
   width: 30px;
   height: 2px;
@@ -1552,47 +1558,11 @@ nav[aria-label="breadcrumb"] {
   }
   
 }
-.hero-img img{
-  filter: drop-shadow(0 0 7px rgba(0,0,0,1));
-}
-.partners-sec .slider{
-      min-height:calc(var(--item-height) * 1.1) ;
-      margin: 0 ;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow-x: hidden;
-      overflow-y: visible;
-      mask-image: linear-gradient(to right, transparent , black 25% 75% , transparent);
-      .item{
-        width: var(--item-height);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          --slider-duration: 25s;
-          animation: autoRun var(--slider-duration) linear infinite both;
-          animation-delay: calc((( var(--slider-duration) / var(--quantity)) * (var(--position) - 1)) * -1);
-          img{
-              height: var(--item-height);
-              filter: brightness(0) invert(.25);
-              transition: all .4s linear;
-              &:hover{
-                  filter: brightness(1) invert(0);
-                  transform: scale(1.05);
-              }
-          }
-      }
-      &:hover .item{
-          animation-play-state: paused;
-      }
-  }
 
-@keyframes autoRun {
-  from {
-      left: calc((var(--item-height) * 1.5) * (var(--quantity) - 1));
-  }
-  to {
-      left: calc((var(--item-height) * 1.5) * (var(--quantity) / 2 * -1));
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .custom-form .input-group {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 }
