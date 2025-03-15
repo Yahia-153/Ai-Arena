@@ -131,6 +131,7 @@ body {
             position: relative;
             .num-title{
                 font-size: 24px;
+                
                 font-weight: 500;
                 span{
                     font-weight: 700;
