@@ -128,15 +128,7 @@ body {
             width: fit-content;
             text-wrap: wrap;
             position: relative;
-            .num-title{
-                font-size: 24px;
-
-                font-weight: 500;
-                span{
-                    font-weight: 700;
-                    font-size: 32px;
-                }
-            }
+            
 
         }
         &::after{
@@ -149,6 +141,14 @@ body {
             border-bottom: 60px solid transparent;
             right: 0;
         }
+    }
+}
+.num-title{
+    font-size: 24px;
+    font-weight: 500;
+    span{
+        font-weight: 700;
+        font-size: 32px;
     }
 }
 @-webkit-keyframes autoRun {
