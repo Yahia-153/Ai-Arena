@@ -20,7 +20,6 @@
     --h2-font-size: 48px;
     --h3-font-size: 36px;
     --h4-font-size: 32px;
-    --h5-font-size: 24px;
     --h6-font-size: 22px;
     --p-font-size: 20px;
     --btn-font-size: 16px;
@@ -131,7 +130,7 @@ body {
             position: relative;
             .num-title{
                 font-size: 24px;
-                
+
                 font-weight: 500;
                 span{
                     font-weight: 700;

@@ -34,20 +34,12 @@ body {
 /*---------------------------------------
   TYPOGRAPHY               
 -----------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.5px;
-}
+
 
 h1,
 h2 {
   letter-spacing: -1.5px;
-  
+
 }
 
 h1 {
@@ -68,9 +60,6 @@ h4 {
   font-size: var(--h4-font-size);
 }
 
-h5 {
-  font-size: var(--h5-font-size);
-}
 
 h6 {
   font-size: var(--h6-font-size);
@@ -954,7 +943,6 @@ nav[aria-label="breadcrumb"] {
   JOB              
 -----------------------------------------*/
 .recent-jobs-bottom .custom-btn {
-  font-size: var(--h5-font-size);
   padding: 25px 50px;
 }
 
@@ -1351,9 +1339,6 @@ nav[aria-label="breadcrumb"] {
     font-size: 28px;
   }
 
-  h5 {
-    font-size: 20px;
-  }
 
   h6 {
     font-size: 18px;
@@ -1467,9 +1452,7 @@ nav[aria-label="breadcrumb"] {
     font-size: 22px;
   }
 
-  h5 {
-    font-size: 20px;
-  }
+
 
   .badge {
     margin: 10px 10px 5px 0;
