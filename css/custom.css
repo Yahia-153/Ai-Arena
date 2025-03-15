@@ -130,7 +130,6 @@ body {
             text-wrap: wrap;
             position: relative;
             .num-title{
-                line-height:110%;
                 font-size: 24px;
                 font-weight: 500;
                 span{
