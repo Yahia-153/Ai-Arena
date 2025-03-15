@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +15,7 @@
     --p-color: #717275;
     --border-color: #e9eaeb;
   
-    --body-font-family: "League Spartan", sans-serif;
+    --body-font-family: "REM", sans-serif;
   
     --h1-font-size: 62px;
     --h2-font-size: 48px;
@@ -39,11 +40,12 @@
 body {
     background-color: var(--white-color);
     font-family: var(--body-font-family);
+    font-weight: 100;
 }
 h2{
     font-size: var(--h2-font-size);
 }
-.partners-sec .slider {
+.compititions-sec .slider {
     min-height: calc(var(--item-height) * 1.1);
     margin: 0;
     display: flex;
@@ -55,7 +57,7 @@ h2{
     mask-image: linear-gradient(to right, transparent, black 25% 75%, transparent);
 }
 
-.partners-sec .slider .item {
+.compititions-sec .slider .item {
     width: var(--item-height);
     display: flex;
     justify-content: center;
@@ -67,7 +69,7 @@ h2{
     animation-delay: calc((( var(--slider-duration) / var(--quantity)) * (var(--position) - 1)) * -1);
 }
 
-.partners-sec .slider .item img {
+.compititions-sec .slider .item img {
     height: var(--item-height);
     -webkit-filter: brightness(0) invert(.25);
     filter: brightness(0) invert(.25);
@@ -75,14 +77,14 @@ h2{
     transition: all .4s linear;
 }
 
-.partners-sec .slider .item img:hover {
+.compititions-sec .slider .item img:hover {
     -webkit-filter: brightness(1) invert(0);
     filter: brightness(1) invert(0);
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
 
-.partners-sec .slider:hover .item {
+.compititions-sec .slider:hover .item {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
@@ -152,6 +154,17 @@ h2{
     span{
         font-weight: 700;
         font-size: 32px;
+    }
+}
+.pop-up-compitition{
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    .panle{
+        .exit{
+            i{
+                cursor: pointer;
+            }
+        }
     }
 }
 @-webkit-keyframes autoRun {
