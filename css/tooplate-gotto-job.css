@@ -317,7 +317,6 @@ nav[aria-label="breadcrumb"] {
 
 .counter-number,
 .counter-number-text {
-  color: var(--dark-color);
   font-size: var(--h1-font-size);
   line-height: normal;
 }
@@ -957,7 +956,6 @@ nav[aria-label="breadcrumb"] {
 }
 
 .reviews-info strong {
-  color: var(--dark-color);
   line-height: normal;
 }
 
@@ -1009,9 +1007,6 @@ nav[aria-label="breadcrumb"] {
   font-size: 18px;
 }
 
-.job-thumb .badge {
-  border: 0;
-}
 
 .job-thumb-box {
   border: 1px solid var(--border-color);
@@ -1121,35 +1116,6 @@ nav[aria-label="breadcrumb"] {
 
 .job-detail-share {
   margin-left: auto;
-}
-
-.dropdown-sorting .dropdown-menu {
-  border-radius: var(--border-radius-small);
-  border-top: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.dropdown-sorting .dropdown-item {
-  font-size: var(--copyright-font-size);
-  border-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-#dropdownSortingButton {
-  background: transparent;
-  color: var(--dark-color);
-  border: 0;
-  padding: 0;
-}
-
-.sorting-icon {
-  color: var(--p-color);
-}
-
-.sorting-icon.active {
-  color: var(--primary-color);
 }
 
 .job-section-btn-wrap {
