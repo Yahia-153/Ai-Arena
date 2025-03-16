@@ -163,7 +163,6 @@ h2{
     .panel{
         animation: fadeInScale 0.5s ease-in-out;
         display: none;
-        min-height: max-content;
         max-height: 75dvh;
         .exit{
             i{
