@@ -164,7 +164,7 @@ h2{
         animation: fadeInScale 0.5s ease-in-out;
         display: none;
         min-height: max-content;
-        max-height: 80dvh;
+        max-height: 75dvh;
         .exit{
             i{
                 cursor: pointer;
