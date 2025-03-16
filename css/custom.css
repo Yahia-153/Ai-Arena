@@ -9,7 +9,7 @@
     --primary-color: #2d3081;
     --secondary-color: #5658a7;
     --section-bg-color: #f0f8ff;
-    --custom-btn-bg-color: #0672B1;
+    --custom-btn-bg-color: #7f73eb;
     --social-icon-link-bg-color: #7f73eb;
     --dark-color: #000000;
     --p-color: #717275;
@@ -159,14 +159,44 @@ h2{
 .pop-up-compitition{
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(2px);
-    .panle{
+    .panel{
+        animation: fadeInScale 0.5s ease-in-out;
+        display: none;
+        min-height: max-content;
+        max-height: 80dvh;
         .exit{
             i{
                 cursor: pointer;
             }
         }
+        .comptition-info{
+            .info{
+                .awards{
+                    ul{
+                     li{
+                        position: relative;
+                        margin: 10px 0;
+                        padding-left: 50px;
+                         &::before{
+                            content: "";
+                            background: url('../images/compititions/medals/champion.png') no-repeat center;
+                            background-size: contain; 
+                            width: 40px; 
+                            height: 40px;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                         }
+                     }
+                    }
+                }
+            }
+        }
     }
+    
 }
+
 @-webkit-keyframes autoRun {
     from {
         left: calc((var(--item-height) * 1.5) * (var(--quantity) - 1));
@@ -183,6 +213,17 @@ h2{
     to {
         left: calc((var(--item-height) * 1.5) * (var(--quantity) / 2 * -1));
     }
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
 }
 @media screen and (max-width: 820px){
     .achivements-sec{

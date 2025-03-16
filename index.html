@@ -619,43 +619,285 @@
             <section class="reviews-section section-padding">
                 <div class="container">
                     <div class="row">
-                        <div class="pop-up-compitition position-fixed top-0 bottom-0 start-0 end-0 d-none justify-content-center align-items-center " style="z-index: 9999;">
-                            <div class="panle h-75 col-10 bg-white p-4 rounded  shadow-lg">
-                                <div class="exit text-end">
-                                    <i class="bi bi-x-lg fs-4 me-2" style="cursor: pointer;"></i>
+                        <div class="pop-up-compitition position-fixed top-0 bottom-0 start-0 end-0 d-none justify-content-center align-items-center " style="z-index: 9999;" id="compitition-pop-up">
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="FPC-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
                                 </div>
                                 <div class="comptition-info">
-                                    <div class="row row-cols-1 row-cols-md-2">
-                                        <div class="col-md-5 logo border-end border-2 border-gray d-flex justify-content-center align-items-center">
-                                            <img src="images/compititions/FPC.png" class="col-8">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/FPC.png" class="col-12 border-end border-2 border-gray">
                                         </div>
-                                        <div class="col info pt-5 pt-md-0 px-md-5">
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
                                             <h3 class="ps-3 text-custom-primary">First Programmer Compitition (FPC)</h3>
                                             <p class="text-gray my-4 fs-5">The Future Programmer Competition (FPC) is the first programming and robotics competition in Upper Egypt.
                                                  Its third edition, FPC 2025, highlighted participants' creativity in robotics and artificial intelligence programming. 
                                                  The event also featured an awards ceremony attended by Dr. Magda Hanna, Deputy Governor of the Red Sea Governorate</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2025</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>1st place in web champion</li>
+                                                    <li>2nd place in web champion</li>
+                                                    <li>3rd place in web champion</li>
+                                                    <li>4th place in web champion</li>
+                                                    <li>5th place in web champion</li>
+                                                    <li>6th place in web champion</li>
+                                                    
+                                                </ul>
+                                            </div>
                                         </div>
 
                                     </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="RCJ-Egypt-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/RCJ_Egypt.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">RoboCup Junior Egypt (RCJ Egypt)</h3>
+                                            <p class="text-gray my-4 fs-5">RoboCupJunior Egypt is part of the global RoboCup competition, where students compete in robotics challenges such as rescue, soccer, and autonomous exploration. It is held annually to enhance programming and robotics skills.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2019</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>1st Place in the national championship</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="FLL-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/FLL.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">First Lego League (FLL)</h3>
+                                            <p class="text-gray my-4 fs-5">FLL is a global robotics competition that uses LEGO-based robots to solve engineering challenges. Participants compete in teamwork, innovation, and robot design, enhancing STEM skills through problem-solving and creativity.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2022</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>3rd place in Robot Performance Award</li>
+                                                    <li>Creative Programming Award in junior division</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="FTC-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/FTC.png" class="col-12 border-end border-2 border-gray p-1">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">First Tech Challenge (FTC)</h3>
+                                            <p class="text-gray my-4 fs-5">FTC is a global robotics competition where teams design, build, and program robots to compete in alliance-based game challenges that test engineering and teamwork skills.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2023</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>3rd place in Robot Performance Award</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="ICool-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/I_Cool.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">ICool Challenge</h3>
+                                            <p class="text-gray my-4 fs-5">iCOOL is an international online robotics competition focusing on CoSpace technology, where participants develop AI strategies for simulated rescue and navigation challenges.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2021</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>1st, 2nd, and 3rd places in iCOOL Egypt</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="Seaperch-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/Seaperch.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">SeaPerch North Africa</h3>
+                                            <p class="text-gray my-4 fs-5">SeaPerch is an underwater robotics competition where students design, build, and operate ROVs (Remotely Operated Vehicles) to complete aquatic challenges.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2022</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>Best Design Award in North Africa Finals</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="RoboRave-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/Robo Rave.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">RoboRave</h3>
+                                            <p class="text-gray my-4 fs-5">Roborave is an international robotics competition where students design and program autonomous robots to complete various challenges like line following, maze solving, and firefighting.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2024</h6>
+                                                <h6 class="text-custom-primary ms-md-1">Online :</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>First Place in Fastbot World Championship</li>
+                                                    <li>First Place in Fire Fighting World Championship</li>
+                                                    <li>First Place in Follow Line World Championship</li>
+                                                    <li>First Place in Maze World Championship</li>
+                                                </ul>
+                                                <h6 class="text-custom-primary ms-md-1">Onsite :</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>First Place (Senior) in Jousting</li>
+                                                    <li>First Place (Senior) in Sumo</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="RobotChallenge-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/Robot_Challenge.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">International Robot Challenge</h3>
+                                            <p class="text-gray my-4 fs-5">The International Robot Challenge (IRC) is a global competition where students (ages 5-24) showcase coding and robotics skills. It fosters creativity, problem-solving, and innovation. The 2024 edition in Egypt marked a major milestone. IRC joins events like FIRST Global and WRO in promoting STEM education worldwide.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2024</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>First Place in web Catigory</li>
+                                                    <li>First Place in Follow Line Catigory</li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
+                                </div>
+                            </div>
+                            <div class="panel col-md-8 bg-white p-4 rounded  shadow-lg overflow-auto" id="RCAP-panel">
+                                <div class="exit text-end mb-2 ">
+                                    <i class="bi bi-x-lg fs-4 me-2 close" style="cursor: pointer;"></i>
+                                </div>
+                                <div class="comptition-info">
+                                    <div class="row row-cols-1 row-cols-lg-2">
+                                        <div class="col-lg-4 logo  d-flex justify-content-center align-items-start mb-0 mb-md-4">
+                                            <img src="images/compititions/RoboCup Asia.png" class="col-12 border-end border-2 border-gray">
+                                        </div>
+                                        <div class="col-lg-8 info pt-5 pt-md-0 px-md-5">
+                                            <h3 class="ps-3 text-custom-primary">Virtual RoboCup Asia-Pacific</h3>
+                                            <p class="text-gray my-4 fs-5">RCAP is a robotics competition in the Asia-Pacific region focusing on AI and autonomous robotics challenges. It allows students to test their problem-solving skills in simulated and real-world robotics scenarios.</p>
+                                            <div class="awards">
+                                                <h5 class="text-custom-primary fs-4 mb-2">Our Last Awards</h5>
+                                                <h6 class="text-custom-primary ms-md-1">2020</h6>
+                                                <ul class="list-unstyled row row-cols-md-2">
+                                                    <li>Second Place in the RCAP tournament</li>
+                                                </ul>
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="more-btn-div mt-4 col-12 text-center text-md-end">
+                                    <button class="btn custom-btn col-10 col-md-3 me-md-4" id="more-btn">More</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-12">
                             <h2 class="text-center">Our <span class="text-custom-primary">Compititions</span></h2>
                             <div class="partners-sec  py-5 position-relative">
-                                <div class="slider mt-5 col-12" style="--item-height:175px; --quantity:12;">
-                                  <div class="item CodeChallenge" style="--position:1;"><img src="images/compititions/code challenge champion.png"></div>
-                                  <div class="item FLL" style="--position:2;"><img src="images/compititions/FLL.png"></div>
-                                  <div class="item FTC" style="--position:3;"><img src="images/compititions/FTC.png"></div>
-                                  <div class="item FPC" style="--position:12;"><img src="images/compititions/FPC.png"></div>
-                                  <div class="item ICool" style="--position:4;"><img src="images/compititions/I Cool Challenge.png"></div>
-                                  <div class="item RobotChallenge" style="--position:5;"><img src="images/compititions/International Robot Challenge.png"></div>
-                                  <div class="item RoboRave" style="--position:6;"><img src="images/compititions/Robo Rave.png"></div>
-                                  <div class="item RoboCup2018" style="--position:7;"><img src="images/compititions/RoboCup 2018.png"></div>
-                                  <div class="item RoboCupAsia" style="--position:8;"><img src="images/compititions/RoboCup Asia.png"></div>
-                                  <div class="item RoboCupJunior" style="--position:9;"><img src="images/compititions/RoboCupJunior.png"></div>
-                                  <div class="item Seaperch" style="--position:10;"><img src="images/compititions/Seaperch.png"></div>
-                                  <div class="item WeDo" style="--position:11;"><img src="images/compititions/We Do Challenge.png"></div>
+                                <div class="slider mt-5 col-12" style="--item-height:175px; --quantity:9;">
+                                  <div class="item FLL" style="--position:1;"><img src="images/compititions/FLL.png"></div>
+                                  <div class="item FTC" style="--position:2;"><img src="images/compititions/FTC.png"></div>
+                                  <div class="item ICool" style="--position:3;"><img src="images/compititions/I_Cool.png"></div>
+                                  <div class="item RobotChallenge" style="--position:4;"><img src="images/compititions/Robot_Challenge.png"></div>
+                                  <div class="item RoboRave" style="--position:5;"><img src="images/compititions/Robo Rave.png"></div>
+                                  <div class="item RCAP" style="--position:6;"><img src="images/compititions/RoboCup Asia.png"></div>
+                                  <div class="item RCJ-Egypt" style="--position:7;"><img src="images/compititions/RCJ_Egypt.png"></div>
+                                  <div class="item Seaperch" style="--position:8;"><img src="images/compititions/Seaperch.png"></div>
+                                  <div class="item FPC" style="--position:9;"><img src="images/compititions/FPC.png"></div>
                                 </div>
                               </div>         
                         </div>
