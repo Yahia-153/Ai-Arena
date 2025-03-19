@@ -42,6 +42,17 @@ body {
     font-family: var(--body-font-family);
     font-weight: 100;
 }
+#scrollBar{
+    width: 1%;
+    height: 5px;
+    background: var(--custom-btn-bg-color);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    animation: scroll linear;
+    animation-timeline: scroll();
+    box-shadow: rgba(0, 0, 0 , .25) 0 5px 10px;
+}
 h2{
     font-size: var(--h2-font-size);
 }
@@ -92,7 +103,51 @@ h2{
     -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,1));
     filter: drop-shadow(0 0 10px rgba(0,0,0,1));
   }
-
+.projects-section{
+    background: var(--section-bg-color);
+    margin-top: 100px !important;
+    .swiper {
+        width: 100%;
+        padding: 20px;
+      }
+      
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: grab;
+        /* padding: 10px; */
+        .content{
+            padding: 15px 20px;
+            h3{
+                font-size: 24px;
+                font-weight: 500;
+                margin-bottom: 0 !important;
+            }
+            span{
+                font-size: 13px;
+                color: var(--primary-color);
+                font-weight: 500;
+            }
+            p{
+                margin-top: 5px;
+                font-size: 14px;
+                color: var(--p-color);
+            }
+        }
+      }
+      .swiper-slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+        filter: saturate(.75);
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+      
+}
 .achivements-sec{
     justify-content: center;
     .col{
@@ -195,6 +250,14 @@ h2{
         }
     }
     
+}
+@keyframes scroll {
+    0% {
+        width: .5%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 @-webkit-keyframes autoRun {
