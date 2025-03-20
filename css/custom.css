@@ -389,28 +389,12 @@ h2{
 
                     .img{
                         min-width: 400px;
-
+                        display: none !important;
                     }
 
                 }
             }
         }
-        svg{
-            position: absolute;
-            bottom: 0;
-            left: -20px;
-            width: calc(100% + 40px);
-            z-index: 1;
-            .wave1 {
-                animation: waveMove 1s 0s infinite ease-in-out alternate;
-            }
-            .wave2 {
-                animation: waveMove 1s 1s infinite ease-in-out alternate;
-            }
-            .wave3 {
-                animation: waveMove 1s 2s infinite ease-in-out alternate;
-            }
-    
-        }
+        
     }
 }
