@@ -45,7 +45,7 @@ h2{
     min-height: 100dvh;
     .hero-container{
         background: #A7C7E7;
-        height: 100dvh;
+        min-height: 100dvh;
         .mySwiper{
             swiper-slide{
                 padding-top: 125px;
