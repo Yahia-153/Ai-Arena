@@ -3,5 +3,5 @@ window.addEventListener('load', () => {
        console.log('loaded');
        document.querySelector('#preloader').classList.add('d-none');
     }
-    , 7500);
+    , 8000);
 })
