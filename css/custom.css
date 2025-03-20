@@ -16,35 +16,18 @@
     --border-color: #e9eaeb;
   
     --body-font-family: "REM", sans-serif;
-  
-    --h1-font-size: 62px;
-    --h2-font-size: 48px;
-    --h3-font-size: 36px;
-    --h4-font-size: 32px;
-    --h6-font-size: 22px;
-    --p-font-size: 20px;
-    --btn-font-size: 16px;
-    --copyright-font-size: 14px;
-  
-    --border-radius-large: 100px;
-    --border-radius-medium: 30px;
-    --border-radius-small: 10px;
-  
-    --font-weight-thin: 100;
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-}
+  }
   
 body {
     background-color: var(--white-color);
     font-family: var(--body-font-family);
     font-weight: 100;
+    padding-top: 0px;
+
 }
 #scrollBar{
     width: 1%;
-    height: 5px;
+    height: 7px;
     background: var(--custom-btn-bg-color);
     position: fixed;
     top: 0;
@@ -55,6 +38,79 @@ body {
 }
 h2{
     font-size: var(--h2-font-size);
+}
+.hero-sec{
+    position: relative;
+    background: var(--social-icon-link-bg-color);
+    min-height: 100dvh;
+    .hero-container{
+        background: #A7C7E7;
+        height: 100dvh;
+        .mySwiper{
+            swiper-slide{
+                padding-top: 125px;
+                /* background: linear-gradient(to bottom, var(--background-color) calc(100% - 50px), white calc(100% - 50px)); */
+                background: var(--background-color);
+                opacity: 1;
+                pointer-events: none;
+                width: 100dvw;
+                
+                .text{
+                    /* color: white; */
+                    flex: 1.25;
+                    flex-wrap: wrap;
+                    color:var(--text-color);
+                    background: var(--background-color);
+                    min-width: 400px;
+                    h2{
+                        font-size: 48px;
+                        font-weight: 700;
+                        /* color: var(--white-color); */
+                    }
+                    h4{
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                    button{
+                        background:transparent;
+                        color: white;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        margin-top: 20px;
+                        border: 2px solid white;
+                        cursor: pointer;
+                        transition: background 0.3s ease-in-out;
+                        pointer-events: auto;
+                        font-size: 18px;
+                        &:hover{
+                            background: white;
+                            color: var(--background-color);
+                        }
+                    }
+                }
+                .img{
+                    flex: 1.20;
+                    min-width: 390px;
+                    img{
+                        background: var(--background-color);
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    svg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
 }
 .partners-sec .slider {
     min-height: calc(var(--item-height) * 1.1);
@@ -104,7 +160,7 @@ h2{
     filter: drop-shadow(0 0 10px rgba(0,0,0,1));
   }
 .projects-section{
-    background: var(--section-bg-color);
+    background:  var(--section-bg-color);
     margin-top: 100px !important;
     .swiper {
         width: 100%;

@@ -30,6 +30,9 @@
     </head>
     
     <body id="top">
+        <div id="preloader">
+            
+        </div>
         <div id="scrollBar"></div>
         <nav class="navbar p-3 fixed-top mt-4 mx-auto w-75 border d-flex align-items-center " id="navbar" style="background: transparent; backdrop-filter: blur(10px); border-radius: 2.75rem;">
             <div class="container container-lg">
@@ -57,8 +60,10 @@
         <main>
 
 <div class="hero-sec">
-        <div class="hero-container row row-cols-1 row-cols-md-2 m-0 position-relative flex-wrap-reverse">
-            <div class="hero-content col d-grid justify-content-center align-items-center py-0 px-1">
+        <div class="hero-container">
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+            <!-- <div class="hero-content col d-grid justify-content-center align-items-center py-0 px-1">
                 <div class="text text-center z-1">
                     <h1 class="fs-1 text-custom-primary text-capitalize ff-secondary">welcome to our world</h1>
                     <p class="fs-4">Where AI Meets Innovation</p>
@@ -67,9 +72,53 @@
             </div>
             <div class="hero-img col d-flex justify-content-center  z-0 mb-3 mb-md-0">
                 <img src="Videos/Robo Wave.gif" alt="Hero Image" class="img-fluid col-12 col-md-8 ">
-            </div>
+            </div> -->
+            <swiper-container class="mySwiper home w-100 h-100" loop="true" autoplay="true" speed="1500" effect="fade"> <!-- autoplay="true" speed="1000" effect="fade" -->
+                <!-- <swiper-slide class="row row-cols-1 row-cols-md-2" style="--background-color: #6EC5E9;--text-color:#1E3A5F;">Slide 1</swiper-slide> -->
+                <swiper-slide class="row row-cols-1 row-cols-md-2" style="--background-color: #B8E986;--text-color:#1E3A5F;">
+                    <div class="col text text-center z-1 col d-flex flex-column justify-content-center align-items-center ">
+                        <h2> Beginner Tech Courses | <span class="d-block d-md-inline"> Ages 4 - 6</span></h2>
+                        <h4>Discover & Play!</h4>
+                        <p class="w-75">Fun and engaging courses designed for young explorers to spark curiosity and creativity.</p>
+                        <button class="">Learn More</button>
+                    </div>
+                    <div class="col img d-flex justify-content-center align-items-end">
+                        <img src="images/hero-sec/6-9.png" class="">
+                    </div>
+                </swiper-slide>
+                <swiper-slide class="row row-cols-1 row-cols-md-2" style="--background-color: #ff9e0c;--text-color:#FFF;"><div class="col text text-center z-1 col d-flex flex-column justify-content-center align-items-center ">
+                    <h2> Advanced Tech Courses | <span class="d-block d-md-inline"> Ages 13 - 20</span></h2>
+                    <h4>Think, Create, Innovate!</h4>
+                    <p class="w-75">Interactive courses that build problem-solving skills and encourage hands-on learning.</p>
+                    <button class="">Learn More</button>
+                </div>
+                <div class="col img d-flex justify-content-center align-items-end">
+                    <img src="images/hero-sec/9-13.png" class="">
+                </div></swiper-slide>
+                <swiper-slide class="row row-cols-1 row-cols-md-2" style="--background-color: #9575CD;--text-color:#FFF;"><div class="col text text-center z-1 col d-flex flex-column justify-content-center align-items-center ">
+                    <h2>Programming Courses | <span class="d-block d-md-inline"> Ages 9 - 13</span></h2>
+                    <h4>Master Your Skills!</h4>
+                    <p class="w-75">Advanced courses in coding, robotics, and AI to prepare for real-world challenges.</p>
+                    <button class="">Learn More</button>
+                </div>
+                <div class="col img d-flex justify-content-center align-items-end">
+                    <img src="images/hero-sec/13-20.png" class="">
+                </div></swiper-slide>
+                <!-- <swiper-slide class="row row-cols-1 row-cols-md-2" style="--background-color: #FF5252;--text-color:#FFF;">Slide 5</swiper-slide>
+                <swiper-slide class="row row-cols-1 row-cols-md-2" style="--background-color: #3F51B5;--text-color:#FFF;">Slide 6</swiper-slide> -->
+              </swiper-container>
+              
         </div>
-    </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 50" preserveAspectRatio="none"> 
+            <g transform="scale(1, -1) translate(0, -50)">
+                <path fill="white" opacity="0.33" d="M473,33.7c-203.9,44.2-263.1-17-320.3,0C66,59.6,0,29.8,0,29.8V0h1000v29.8 c0,0-62.1,13.1-94.9,14.6c-32.8,1.6-62.8-6.2-75.8-11C806,24.8,745.3,4.3,694.9,2.3S492.4,29.5,473,33.7z"></path> 
+                <path fill="white" opacity="0.66" d="M734,33.7c-45.5,0-77.2-11.6-129.1-19.6c-28.6-4.3-150.3-5.1-254,19.6 s-91.7-17.2-149.2,0C115.7,59.1,0,19.9,0,19.9V0h1000v18.3c0,0-28.2-9.2-92.1-9.2C810.2,9,775.7,33.7,734,33.7z"></path> 
+                <path fill="white" d="M766.1,14.4c-200-28.7-266,32.7-395.1,9.8C242,0.9,242,2.7,184.8,10.3C128,17.9,132.3,22.4,89.9,26.2C28.6,31.8,0,0,0,0 h1000c0,0-9.9,20.4-83.6,24S829.6,23.5,766.1,14.4z"></path> 
+            </g>
+        </svg>
+        
+        
+                </div>
             <section class="categories-section section-padding" id="categories-section">
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
@@ -223,7 +272,7 @@
 
                             <p> <u>Explore the creativity of our students!</u>  From <strong>LEGO</strong>  creations to <strong>Ardouino</strong> projects, <strong>Wedo</strong>  innovations, and interactive <strong>Web</strong>  apps, their work showcases skill, passion, and originality. <u> Dive in and get inspired!</u></p>
                         </div>
-                        <div class="swiper mySwiper">
+                        <div class="swiper mySwiper projects">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="images/projects/coffee shop.png"><div class="content"><h3>Onlone Coffee Shop </h5><span>Front-End Development</span><p>A modern coffee shop website showcasing products, pricing, and easy navigation.</p></div></div>
                                     <div class="swiper-slide"><img src="images/projects/Rosa Bella.png"><div class="content"><h3>Rosa Bella</h5><span>Front-End Development</span><p> A stylish online flower shop that helps customers express love with beautiful arrangements</p></div></div>
@@ -718,6 +767,7 @@
         <script src="js/compititions.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="js/projects-swiper.js"></script>
+        <script src="js/preLoader.js"></script>
 
     </body>
 </html>
