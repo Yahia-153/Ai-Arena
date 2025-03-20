@@ -43,8 +43,9 @@ h2{
     position: relative;
     background: var(--social-icon-link-bg-color);
     min-height: 100dvh;
+    overflow: hidden;
     .hero-container{
-        background: #A7C7E7;
+        background: #ffffff;
         height: 100dvh;
         .mySwiper{
             swiper-slide{
@@ -53,15 +54,14 @@ h2{
                 background: var(--background-color);
                 opacity: 1;
                 pointer-events: none;
-                width: 100dvw;
+                width: 100lvw;
                 gap: 75px;
                 .text{
                     /* color: white; */
                     flex: 1.25;
                     flex-wrap: wrap;
-                    color:var(--text-color);
-                    background: var(--background-color);
-                    min-width: 400px;
+                    color:#fff;
+                    min-width: 390px;
                     h2{
                         font-size: 48px;
                         font-weight: 700;
@@ -73,6 +73,7 @@ h2{
                     }
                     p{
                         font-size: 20px;
+                        font-weight: 400;
                     }
                     button{
                         background:transparent;
@@ -95,11 +96,19 @@ h2{
                     flex: 1.20;
                     min-width: 350px;
                     img{
-                        background: var(--background-color);
                         width: 100%;
-                        height: auto;
                         object-fit: contain;
                     }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background:var(--background-color);
+                    z-index: -1;
                 }
             }
         }
@@ -107,9 +116,19 @@ h2{
     svg{
         position: absolute;
         bottom: 0;
-        left: 0;
-        width: 100%;
+        left: -20px;
+        width: calc(100% + 40px);
         z-index: 1;
+        .wave1 {
+            animation: waveMove 1s 0s infinite ease-in-out alternate;
+        }
+        .wave2 {
+            animation: waveMove 1s 1s infinite ease-in-out alternate;
+        }
+        .wave3 {
+            animation: waveMove 1s 2s infinite ease-in-out alternate;
+        }
+
     }
 }
 .partners-sec .slider {
@@ -155,10 +174,7 @@ h2{
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
-.hero-img img{
-    -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,1));
-    filter: drop-shadow(0 0 10px rgba(0,0,0,1));
-  }
+
 .projects-section{
     background:  var(--section-bg-color);
     margin-top: 100px !important;
@@ -316,6 +332,14 @@ h2{
     }
 }
 
+@keyframes waveMove {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
 @-webkit-keyframes autoRun {
     from {
         left: calc((var(--item-height) * 1.5) * (var(--quantity) - 1));
@@ -344,7 +368,7 @@ h2{
     }
     
 }
-@media screen and (max-width: 820px){
+@media screen and (max-width: 825px){
     .achivements-sec{
         .col{
             .text{
@@ -358,5 +382,35 @@ h2{
             }
         }
     }
+    .hero-sec{
+        .hero-container{
+            .mySwiper{
+                swiper-slide{
+
+                    .img{
+                        min-width: 400px;
+
+                    }
+
+                }
+            }
+        }
+        svg{
+            position: absolute;
+            bottom: 0;
+            left: -20px;
+            width: calc(100% + 40px);
+            z-index: 1;
+            .wave1 {
+                animation: waveMove 1s 0s infinite ease-in-out alternate;
+            }
+            .wave2 {
+                animation: waveMove 1s 1s infinite ease-in-out alternate;
+            }
+            .wave3 {
+                animation: waveMove 1s 2s infinite ease-in-out alternate;
+            }
     
+        }
+    }
 }

@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     setTimeout(() => {
-       
+       console.log('loaded');
     }
-    , 5000);
+    , ((4000 * 3 ) - 1000));
 })
