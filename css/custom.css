@@ -54,7 +54,7 @@ h2{
                 opacity: 1;
                 pointer-events: none;
                 width: 100dvw;
-                
+                gap: 75px;
                 .text{
                     /* color: white; */
                     flex: 1.25;
