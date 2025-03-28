@@ -922,12 +922,19 @@ body{
               
         }
         .course-way{
-            .course:nth-child(even){
-                .text{
-                    text-align: start;
-                    order: 1;
-                } 
-                
+            section{
+                .courses{
+                    .course:nth-child(even){
+                        .text{
+                            text-align: start;
+                            order: 1;
+                        } 
+                        .image{
+                            order: 2;
+                        }
+                        
+                    }
+                }
             }
         }
     }
