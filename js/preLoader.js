@@ -1,7 +1,10 @@
 window.addEventListener('load', () => {
     setTimeout(() => {
-       console.log('loaded');
-       document.querySelector('#preloader').classList.add('d-none');
+        console.log('loaded');
+        document.querySelector('#preloader').classList.add('d-none');
     }
-    , 8000);
+        , 0);
 })
+function animation() {
+
+}
