@@ -475,7 +475,40 @@ body{
                     order: 2;
                 } 
                 
+            .hidden{
+                opacity: 0;
+                transform: translateX(-50%);
+                transition: all 1.5s .15s ease-in-out;
+                &:nth-child(odd){
+                    transform: translateX(50%);
+                }
             }
+            .visible{
+                opacity: 1;
+                transform: translateX(0);
+                &:nth-child(odd){
+                    transform: translateX(0);
+                }
+            }
+            }
+            .hidden{
+                opacity: 0;
+                transform: translateX(50%);
+                transition: all 1.5s .15s ease-in-out;
+                &:nth-child(odd){
+                    transform: translateX(-50%);
+                }
+
+            }
+
+            .visible{
+                opacity: 1;
+                transform: translateX(0);
+                &:nth-child(odd){
+                    transform: translateX(0);
+                }
+            }
+
         }
     }
 
