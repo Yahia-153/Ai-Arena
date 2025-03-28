@@ -29,6 +29,9 @@ body {
     padding-top: 0px;
 
 }
+.border-custom-primary{
+    border: 1px solid var(--custom-btn-bg-color);
+}
 #scrollBar{
     width: 1%;
     height: 5px;
@@ -190,7 +193,7 @@ body{
     }
     svg{
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: -20px;
         width: calc(100% + 40px);
         z-index: 1;
