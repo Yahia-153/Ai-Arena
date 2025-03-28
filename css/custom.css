@@ -921,4 +921,13 @@ body{
         
               
         }
+        .course-way{
+            .course:nth-child(even){
+                .text{
+                    text-align: start;
+                    order: 1;
+                } 
+                
+            }
+        }
     }
