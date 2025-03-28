@@ -433,8 +433,8 @@ nav[aria-label="breadcrumb"] {
 
 .logo-image {
   display:inline;
-  width: 160px;
-  margin-right: 15px;
+  width: 150px;
+  margin-right: 5px;
 }
 
 .logo-text {

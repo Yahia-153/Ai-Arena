@@ -481,18 +481,14 @@ body{
     .intro {
         color: var(--custom-btn-bg-color);
         padding: 75px 0;
-      }
+        text-align: center;
+    }
       h1 {
         font-size: 2.5rem;
       }
       
       
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-      }
+
       
       /* Timeline Section */
       
@@ -549,7 +545,7 @@ body{
       .timeline li {
           position: relative;
           margin-bottom: 50px;
-          width: 50%;
+          width: 40%;
           padding: 20px;
           background: rgba(128, 128, 128, 0.04);
           border-radius: 10px;
@@ -568,7 +564,7 @@ body{
       
       
       .timeline li:nth-child(odd) {
-          left:-6%;
+          left:4%;
           text-align: right;
           &::before{
               right: -72.5px; 
