@@ -23,6 +23,7 @@
   } */
   
 body {
+    --body-font-family: "REM", sans-serif;
     background-color: var(--white-color);
     font-family: var(--body-font-family);
     font-weight: 100;
