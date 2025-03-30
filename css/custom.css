@@ -8,7 +8,7 @@
         color: var(--white-color);
     }
 }
-:root {
+/* :root {
     --white-color: #ffffff;
     --primary-color: #2d3081;
     --secondary-color: #5658a7;
@@ -20,7 +20,7 @@
     --border-color: #e9eaeb;
   
     --body-font-family: "REM", sans-serif;
-  }
+  } */
   
 body {
     background-color: var(--white-color);
@@ -420,9 +420,7 @@ body{
                     .num{
                         text-transform: uppercase;
                         -webkit-text-stroke: var(--primary-color) 1px;
-
                         color: transparent;
-                        margin-bottom: -10px;
                         font-weight: 700;
                         font-size: 3rem;
                     }

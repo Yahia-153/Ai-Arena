@@ -10,7 +10,7 @@
   --white-color: #ffffff;
   --primary-color: #2d3081;
   --secondary-color: #5658a7;
-  --section-bg-color: #f0f8ff;
+  --section-bg-color: #fdf9ff;
   /* --custom-btn-bg-color: #0672B1; */
   --custom-btn-bg-color:#7f73eb;
   --social-icon-link-bg-color: #7f73eb;
@@ -309,10 +309,12 @@ nav[aria-label="breadcrumb"] {
   color: var(--primary-color);
 }
 .btn-custom-primary{
-  background: var(--primary-color);
+  background: var(--custom-btn-bg-color);
   color: #ffffff;
+  transition: all 0.3s;
   &:hover{
-    color: #ffffff;
+    color: var(--custom-btn-bg-color);
+    background: #ffffff;
   }
 }
 /*---------------------------------------
