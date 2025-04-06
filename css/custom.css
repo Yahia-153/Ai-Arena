@@ -30,6 +30,14 @@ body {
     padding-top: 0px;
 
 }
+@media screen and (max-width: 800px) {
+    h2{
+        font-size: 1.75rem !important;
+    }
+    .logo-image{
+        width: 175px !important;
+    }
+}
 .border-custom-primary{
     border: 1px solid var(--custom-btn-bg-color);
 }
@@ -110,6 +118,12 @@ body{
     padding-top: 15dvh;
     &.home{
         padding-top: 0;
+    }
+}
+nav{
+    /* background: rgb(255, 255, 255 , .05)  !important; */
+    .logo-image{
+        width: 225px;
     }
 }
 .hero-sec{
@@ -236,8 +250,6 @@ body{
 
 .partners-sec .slider .item img {
     height: var(--item-height);
-    -webkit-filter: brightness(0) invert(.25);
-    filter: brightness(0) invert(.25);
     -webkit-transition: all .4s linear;
     transition: all .4s linear;
 }
@@ -681,6 +693,16 @@ body{
       
 
       
+}
+footer{
+    div{
+        padding: 0 20px;
+
+    }
+    .social-icon{
+        display: flex;
+        gap: 40px;
+    }
 }
 /* Keyframe Animations */
 @keyframes fadeIn {
