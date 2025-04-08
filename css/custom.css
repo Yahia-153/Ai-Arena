@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -21,14 +21,26 @@
   
     --body-font-family: "REM", sans-serif;
   } */
-  
+  .skiptranslate{
+    display: none !important;
+  }
 body {
     --body-font-family: "REM", sans-serif;
     background-color: var(--white-color);
     font-family: var(--body-font-family);
     font-weight: 100;
-    padding-top: 0px;
+    padding-top: 15dvh;
+    &.home{
+        padding-top: 0;
+    }
+    &.about{
+        padding-top: 0;
+    }
+    &:has(#lang:checked){
+        --body-font-family: "Cairo", sans-serif;
 
+
+    }
 }
 @media screen and (max-width: 800px) {
     h2{
@@ -114,12 +126,7 @@ h2{
         height: var(--loader-size);
     }
 }
-body{
-    padding-top: 15dvh;
-    &.home{
-        padding-top: 0;
-    }
-}
+
 nav{
     /* background: rgb(255, 255, 255 , .05)  !important; */
     .logo-image{
@@ -222,6 +229,20 @@ nav{
             animation: waveMove 1s 2s infinite ease-in-out alternate;
         }
 
+    }
+}
+.brief{
+    .text{
+        p{
+            font-size: 1.4rem; 
+            text-align:justify ; 
+            text-align-last: center; 
+            font-weight: 350;
+            @media (max-width: 800px) {
+                    text-align: center;
+                
+            }
+        }
     }
 }
 .partners-sec .slider {
@@ -497,7 +518,6 @@ nav{
             }
             .course:nth-child(even){
                 .text{
-                    text-align: end;
                     order: 2;
                 } 
                 
@@ -571,7 +591,7 @@ nav{
           &::before{
             content: '';
             position: absolute;
-            top: -15px;
+            bottom: -15px;
             width: 30px;
             aspect-ratio: 1/1;
             background: var(--custom-btn-bg-color);
@@ -600,7 +620,31 @@ nav{
           padding: 0;
           display: flex;
           flex-direction: column-reverse;
-      }
+          &::before{
+            content: '';
+            position: absolute;
+            top: -60px;
+            width: 30px;
+            border-bottom: var(--custom-btn-bg-color) 30px solid;
+            border-right: transparent 15px solid;
+            border-left: transparent 15px solid;
+            left: calc(50% - 15px);
+            /* border-radius: 50%; */
+          }&::after{
+            content: '';
+            position: absolute;
+            top: -27.5px;
+            width: 4px;
+            height: 22.5px;
+            background: repeating-linear-gradient( 
+                var(--custom-btn-bg-color) 0 40%,
+                transparent 40% 60%,
+                var(--custom-btn-bg-color) 60% 100%
+            );
+            left: calc(50% - 2px);
+            /* border-radius: 50%; */
+          }
+        }
       
       
       
@@ -701,7 +745,7 @@ footer{
     }
     .social-icon{
         display: flex;
-        gap: 40px;
+        gap: 10px;
     }
 }
 /* Keyframe Animations */
@@ -871,7 +915,7 @@ footer{
                   &::before{
                     content: '';
                     position: absolute;
-                    top: -15px;
+                    bottom: -15px;
                     width: 30px;
                     aspect-ratio: 1/1;
                     background: var(--custom-btn-bg-color);
@@ -898,6 +942,11 @@ footer{
               .timeline ul {
                   list-style: none;
                   padding: 0 0 0 95px;
+                  &::before{
+                    left: calc(60px - 15px);
+                  }&::after{
+                    left: calc(60px - 2px);
+                  }
               }
               
               
@@ -959,6 +1008,7 @@ footer{
                   animation: pulse 1.5s infinite;
                   z-index: 10; 
               }
+
               
               /* Hover Glow Effect */
               .timeline li:hover {

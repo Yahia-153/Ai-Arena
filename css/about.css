@@ -20080,7 +20080,6 @@ h1 + .tabs-line {
 	text-align: center;
 	line-height: 1.2;
 	letter-spacing: .05em;
- 
 	color: #151515;
 	z-index: 1;
 }
@@ -20099,6 +20098,7 @@ h1 + .tabs-line {
 
 .progress-bar-circle canvas {
 	vertical-align: middle;
+	border-radius: 50%;
 }
 
 .progress-bar-circle span {

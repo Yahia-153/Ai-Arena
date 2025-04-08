@@ -87,14 +87,15 @@
 				var circle = $(plugins.circleProgress[i]);
 
 				circle.circleProgress({
-					value:      circle.attr('data-value'),
+					value:      circle.attr('data-value')   ,
 					size:       circle.attr('data-size') ? circle.attr('data-size') : 175,
 					fill:       {
 						gradient:      circle.attr('data-gradient').split(","),
 						gradientAngle: Math.PI / 4
 					},
-					startAngle: -Math.PI / 4 * 2,
-					emptyFill:  circle.attr('data-empty-fill') ? circle.attr('data-empty-fill') : "rgb(245,245,245)"
+					startAngle: -Math.PI /  2,
+					emptyFill:  circle.attr('data-empty-fill') ? circle.attr('data-empty-fill') : "rgb(245,245,245)",
+					lineCap: 'round'
 				}).on('circle-animation-progress', function (event, progress, stepValue) {
 					$(this).find('span').text(String(stepValue.toFixed(2)).replace('0.', '').replace('1.', '1'));
 				});
