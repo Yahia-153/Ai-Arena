@@ -6,4 +6,3 @@ fetch('https://dummyjson.com/quotes/random')
     document.getElementById("footer-quote").innerHTML = quote;
     document.getElementById("footer-author").innerHTML = author;
 });
-getQuote();

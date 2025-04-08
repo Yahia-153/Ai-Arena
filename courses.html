@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="AI arena where AI meets innovation">
+    <meta name="author" content="AI Arena">
+
+    <title>AI Arena || Achivements</title>
+    <link rel="icon" type="image/x-icon" href="images/ai.png">
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/tooplate-gotto-job.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+
+<body class="courses-page">
+<div id="preloader">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+        type="module"></script>
+    <dotlottie-player src="https://lottie.host/4721a282-1ff6-4d30-a515-1af5ae339c73/A3SEEWgWhg.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+    <!-- <iframe src="https://lottie.host/embed/4721a282-1ff6-4d30-a515-1af5ae339c73/A3SEEWgWhg.lottie"></iframe> -->
+
+    <div class="loader">
+        <li class="ball"></li>
+        <li class="ball"></li>
+        <li class="ball"></li>
+    </div>
+</div>
+<div id="scrollBar"></div>
+<nav class="navbar p-3 fixed-top mt-4 mx-auto w-75 border d-flex align-items-center " id="navbar"
+style="background: transparent; backdrop-filter: blur(10px); border-radius: 2.75rem;">
+<div class="container container-lg">
+    <a class="navbar-brand" href="index.html">
+        <img class="logo-image" src="images/logo/logo.png">
+    </a>
+    <button class="navbar-toggler rounded-4 border-0 border-none outliune-0  " type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="container conatiner-fluid  my-2 row-cols-1 row-cols-lg-auto d-xl-flex align-items-center flex-wrap justify-content-around  fw-bold"
+            id="navLinks" style="font-size: 1rem;">
+            <a class="text-nowrap nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Home</a>
+            <a class="text-nowrap nav-link" href="about.html"><i class="bi bi-people me-1"></i>About</a>
+            <a class="text-nowrap nav-link" href="courses.html"><i class="bi bi-journal-code me-1"></i>Courses</a>
+            <a class="text-nowrap nav-link" href="achivements.html"><i
+                    class="bi bi-trophy me-1"></i></i>Achivements</a>
+            <a class="text-nowrap nav-link" href="contact.html"><i class="bi bi-headset me-1"></i>Contact</a>
+        </div>
+    </div>
+</div>
+</nav>
+<button type="button" id="toTop"
+    class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-5 z-3 shadow d-none" id="backToTop"
+    style="width:clamp(50px , 11dvw, 70px); aspect-ratio: 1/1;">
+    <i class="bi bi-arrow-up text-white fs-2 fw-bold"></i>
+</button>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empower Your Future with Tech Education</h1>
+            <p>40+ courses from beginner to advanced levels with hands-on projects and certifications</p>
+            <a href="#coursesContainer"><button class="btn btn-custom-primary">Explore Courses</button></a>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs"  id="coursesContainer">
+        <button class="active">All Courses</button>
+        <button>Programming</button>
+        <button>Robotics</button>
+        <button>AI/ML</button>
+        <button>IoT</button>
+        <button>Teacher Training</button>
+    </div>
+
+    <!-- Filter System -->
+    <div class="courses-container">
+        <div class="filter-system">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="level">Level</label>
+                    <select id="level">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="duration">Duration</label>
+                    <select id="duration">
+                        <option value="all">Any Duration</option>
+                        <option value="short">Under 1 month</option>
+                        <option value="medium">1-3 months</option>
+                        <option value="long">Over 3 months</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="certificate">Certificate</label>
+                    <select id="certificate">
+                        <option value="all">All Options</option>
+                        <option value="yes">With Certificate</option>
+                        <option value="no">Without Certificate</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="course-grid" id="courseGrid">
+            <!-- Courses will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Featured AI Section -->
+    <section class="featured-section">
+        <div class="section-header">
+            <h2>AI & Machine Learning Path</h2>
+            <p>Explore our cutting-edge AI courses designed for all skill levels</p>
+        </div>
+        
+        <div class="courses-container">
+            <div class="course-grid">
+                <!-- AI Course 1 -->
+                <div class="course-card">
+                    <span class="level-badge">Beginner</span>
+                    <img src="images/courses/page/ml.jpeg" alt="Machine Learning for Kids">
+                    <div class="course-info">
+                        <h3>Machine Learning for Kids</h3>
+                        <p>Introduces ML concepts using fun, interactive projects</p>
+                        <div class="course-details">
+                            <span>🕒 6 Weeks</span>
+                            <span>⭐ 4.8 (85)</span>
+                        </div>
+                        <button class="enroll-btn">Enroll Now</button>
+                    </div>
+                </div>
+                
+                <!-- AI Course 2 -->
+                <div class="course-card">
+                    <span class="level-badge">Intermediate</span>
+                    <img src="images/courses/page/roblox.png" alt="Roblox AI Development">
+                    <div class="course-info">
+                        <h3>Roblox AI Development</h3>
+                        <p>Learn to implement AI in Roblox game environments</p>
+                        <div class="course-details">
+                            <span>🕒 8 Weeks</span>
+                            <span>⭐ 4.6 (120)</span>
+                        </div>
+                        <button class="enroll-btn">Enroll Now</button>
+                    </div>
+                </div>
+                
+                <!-- AI Course 3 -->
+                <div class="course-card">
+                    <span class="level-badge">Advanced</span>
+                    <img src="images/courses/page/ai-etics.jpeg" alt="AI Ethics">
+                    <div class="course-info">
+                        <h3>AI Ethics and Societal Impact</h3>
+                        <p>Explore ethical considerations in AI development</p>
+                        <div class="course-details">
+                            <span>🕒 4 Weeks</span>
+                            <span>⭐ 4.9 (65)</span>
+                        </div>
+                        <button class="enroll-btn">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Success Stories</h2>
+            <p>Hear from our students who transformed their careers</p>
+        </div>
+        
+        <div class="courses-container">
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The Python course gave me the skills to land my first developer job. The hands-on projects were exactly what employers wanted to see."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah" class="author-img">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Data Analyst at TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"After completing the AI courses, I was able to transition from teaching to a machine learning engineer role with a 50% salary increase."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael" class="author-img">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>ML Engineer at AI Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The IoT course helped me build my first smart home device prototype that eventually became my startup's flagship product."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" class="author-img">
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Founder, SmartHome Tech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-12 mb-3">
+                <div class="d-flex align-items-center mb-4">
+                    <img src="images/logo/logo.png" class="img-fluid logo-image">
+
+                </div>
+
+                <p class="mb-2">
+                    <i class="custom-icon bi-globe me-1"></i>
+
+                    <a href="https://www.ai-arena.tech" class="site-footer-link">
+                        www.ai-arena.tech
+                    </a>
+                </p>
+
+                <p class="mb-2">
+                    <i class="custom-icon bi-telephone me-1"></i>
+
+                    <a href="tel: +201017459150" class="site-footer-link">
+                        +20 10 1745 9150
+                    </a>
+                </p>
+                <p class="mb-2">
+                    <i class="custom-icon bi-telephone me-1"></i>
+
+                    <a href="tel: +966532950543" class="site-footer-link">
+                        +966 53 295 0543
+                    </a>
+                </p>
+
+                <p>
+                    <i class="custom-icon bi-envelope me-1"></i>
+
+                    <a href="mailto:contact@ai-arena.tech" class="site-footer-link">
+                        contact@ai-arena.tech
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-6 mx-lg-auto">
+                <h6 class="site-footer-title">Company</h6>
+
+                <ul class="footer-menu">
+                    <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">Home</a></li>
+
+                    <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">About</a></li>
+
+                    <li class="footer-menu-item"><a href="" class="footer-menu-link">Courses</a></li>
+
+                    <li class="footer-menu-item"><a href="achivements.html" class="footer-menu-link">Achivements</a></li>
+
+                    <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <div class="col-lg-4 col-md-8 col-12 mt-3 mt-lg-0">
+                <div class="custom-form newsletter-form text-center">
+                    <h6 class="site-footer-title">Qoute Of The Day</h6>
+                    <h6 class="fs-6" style="color: gray;" id="footer-quote"></h6>
+                    <h6 class="fs-6 text-custom-primary" id="footer-author"></h6>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-12 d-flex align-items-center">
+                    <p class="copyright-text">Copyright © AI Arena 2025</p>
+
+                </div>
+
+                <div class="col-lg-5 col-12 mt-2 mt-lg-0">
+                    <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="https://www.facebook.com/AiArenaaa" class="social-icon-link bi-facebook"></a>
+                            </li>
+  
+                            <li class="social-icon-item">
+                                <a href="https://www.instagram.com/aiarenaa_/" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="" class="social-icon-link bi-tiktok"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="" class="social-icon-link bi-snapchat"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="" class="social-icon-link bi-linkedin"></a>
+                            </li>
+                        </ul>
+                        
+                </div>
+
+                <div class="col-lg-3 col-12 mt-2 d-flex align-items-center mt-lg-0">
+                    <p>Design: <a class="sponsored-link" rel="sponsored" href="" target="_blank">AI Arena Team</a>
+                    </p>
+                </div>
+
+                <a class="back-top-icon bi-arrow-up smoothscroll d-flex justify-content-center align-items-center"
+                    href="#top"></a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/6199574a0e.js" crossorigin="anonymous"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/compititions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/courses.js"></script>
+    <script src="js/preLoader.js"></script>
+    <script src="js/qoute.js"></script>
+
+</body>
+
+</html>
