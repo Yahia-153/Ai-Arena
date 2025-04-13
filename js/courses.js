@@ -191,7 +191,6 @@
                             <span>🕒 ${course.duration}</span>
                             <span>⭐ ${course.rating}</span>
                         </div>
-                        <button class="enroll-btn">Enroll Now</button>
                     </div>
                 `;
                 
