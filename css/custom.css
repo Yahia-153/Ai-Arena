@@ -687,6 +687,12 @@ nav{
       .timeline li.show {
           opacity: 1;
           transform: translateY(0);
+          &.opened .achievement .before{
+            opacity: 1;
+            transform: scale(1);
+            filter: blur(0px);
+            scale: 1;
+          }
       }
       
       
@@ -741,13 +747,23 @@ nav{
         user-select: none;
         
       } */
-      .timeline li:nth-child(even) .achievement:hover{
-        &::before{
+      .timeline li:nth-child(even):not(.opened) .achievement:hover{
+        .before{
           transform: translateX(calc((100% + 110px) * -1));
         }
       }
-      .timeline li:nth-child(odd) .achievement:hover{
-        &::before{
+      .timeline li:nth-child(odd):not(.opened) .achievement:hover{
+        .before{
+          transform: translateX(calc(100% + 110px));
+        }
+      }
+      .timeline li:nth-child(even).opened .achievement{
+        .before{
+          transform: translateX(calc((100% + 110px) * -1));
+        }
+      }
+      .timeline li:nth-child(odd).opened .achievement{
+        .before{
           transform: translateX(calc(100% + 110px));
         }
       }
@@ -767,26 +783,26 @@ nav{
           transition: transform 0.6s ease;
           border-radius: inherit;
           z-index: 2;
-          /* &::before{
-          content: '';
+          .before{
           position: absolute; 
           top: 0;
           left: 0;
           right: 0;
           width: 100%;
+          height: 100%;
           bottom: 0;
-          background: url('https://images.pexels.com/photos/18623730/pexels-photo-18623730/free-photo-of-facade-of-a-byzantine-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center / cover;
           border-radius: inherit;
+          object-fit: cover;
           z-index: -1;
-          transition: all 0.6s ease-in-out;
+          transition: all .75s .15s ease-in-out;
           opacity: 0;
           user-select: none;
           filter: blur(10px);
           border: 2px solid var(--custom-btn-bg-color);
           scale: .6;
           box-shadow: 0 0 10px var(--custom-btn-bg-color);
-          } */
-          &:hover::before{
+          }
+          &:hover .before{
             opacity: 1;
             transform: scale(1);
             filter: blur(0px);
@@ -2043,7 +2059,7 @@ footer{
               .achievement {
                   text-align: center;
                   padding: 10px;
-                  &::before{
+                  .before{
                     display: none;
                   }
               }
