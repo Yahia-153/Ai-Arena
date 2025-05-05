@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(bootstrap-icons.css);
 *{
     box-sizing: border-box;
     margin: 0;
@@ -70,6 +71,107 @@ body {
     animation: scroll linear;
     animation-timeline: scroll();
     box-shadow: rgba(0, 0, 0 , .25) 0 5px 10px;
+}
+#whatsApp{
+  --tooltip-space:calc( calc(100% + 15px));
+  content: '';
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1/1;
+  position: fixed;
+  right: 0;
+  bottom: 120px;
+  border-radius: 50% ;
+  z-index: 900;
+  scale: 0.85;
+  /* background: #25d366; */
+  background: transparent;
+  border: none;
+  &::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 160px;
+    --tooltip-space:calc( calc(100% + 20px));
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 10px 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: 1px solid #25d366;
+    display: none;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right:calc(var(--tooltip-space));
+    left: auto;
+    z-index: 3;
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    display: none;
+  }
+  &.left{
+  &::after{
+    left:calc(var(--tooltip-space));
+    right: auto;
+  }
+  &::before{
+    left: calc(var(--tooltip-space) - 10px);
+    right: auto;
+    border-right: 15px solid #25d366;
+    border-left: 0 ;
+  }
+  }
+  &.right{
+  &::after{
+    right:calc(var(--tooltip-space));
+    left: auto;
+
+  }
+  &::before{
+    right:calc(var(--tooltip-space) - 10px);
+    left: auto;
+    border-left: 15px solid #25d366;
+    border-right: 0 ;
+
+  }
+  }
+  &:hover{
+    &::after{
+        display: block;
+    }
+    &::before{
+        display: block;
+    }
+  }
+  .icon{
+    font-family:'Bootstrap-icons';
+    content:'\F618';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50% , -50%);
+    aspect-ratio: 1/1;
+    color: #ffffff;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    background: #43db7b;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0 , .3) ; */
+  
+  }
+}
+  
+
+.no-select {
+  user-select: none;
 }
 h2{
     font-size: var(--h2-font-size);
@@ -1757,6 +1859,13 @@ nav{
       --h3-font-size: 32px;
       --h4-font-size: 28px;
       --h6-font-size: 18px;
+    }
+    #whatsApp{
+      width: 86.25px;
+      height: 75px;
+    &::before{
+      font-size: 1.85rem;
+    }
     }
   }
   
